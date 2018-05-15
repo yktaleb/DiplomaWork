@@ -6,4 +6,4 @@ deploy:
   api-key:
     secure: "$HEROKU_API_KEY"
   on: master
-  app: ncgrad
+  app: diploma
