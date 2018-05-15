@@ -1,11 +1,9 @@
 language: java
 jdk:
 - oraclejdk8
-branches:
-  only:
-    - master
 deploy:
   provider: heroku
   api-key:
-  secure: $HEROKU_API_KEY
+    secure: $HEROKU_API_KEY
+  on: master
   app: taleb-diploma
