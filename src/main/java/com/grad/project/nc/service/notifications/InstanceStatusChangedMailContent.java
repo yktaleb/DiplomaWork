@@ -10,7 +10,7 @@ public class InstanceStatusChangedMailContent extends MailContent {
         getContext().put("instance", instance);
         getContext().put("user", user);
 
-        setSender("support@ncgrad.herokuapp.com");
+        setSender("support@taleb.kpi.com");
         setSubject("Instance status changed");
 
         setTemplateName("instanceStatusChange.ftl");

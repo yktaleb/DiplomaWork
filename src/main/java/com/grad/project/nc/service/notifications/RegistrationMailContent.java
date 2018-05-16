@@ -9,7 +9,7 @@ class RegistrationMailContent extends MailContent {
     RegistrationMailContent(User user) {
         context.put("user", user);
 
-        setSender("support@ncgrad.herokuapp.com");
+        setSender("support@taleb.kpi.com");
         setSubject("Welcome");
 
         setTemplateName("registration.ftl");

@@ -10,7 +10,7 @@ public class ComplaintUnderConsiderationMailContent extends MailContent {
         getContext().put("complaint", complain);
         getContext().put("user", complain.getUser());
 
-        setSender("support@ncgrad.herokuapp.com");
+        setSender("support@taleb.kpi.com");
         setSubject("Complaint under consideration");
 
         setTemplateName("complaintUnderConsideration.ftl");

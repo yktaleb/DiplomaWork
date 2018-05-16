@@ -10,7 +10,7 @@ public class NewComplaintMailContent extends MailContent {
         getContext().put("complaint", complain);
         getContext().put("user", complain.getUser());
 
-        setSender("support@ncgrad.herokuapp.com");
+        setSender("support@taleb.kpi.com");
         setSubject("Complaint created");
 
         setTemplateName("newComplaint.ftl");

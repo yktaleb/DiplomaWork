@@ -6,7 +6,7 @@ class NewOrderMailContent extends MailContent {
     NewOrderMailContent(ProductOrder order) {
         getContext().put("order", order);
 
-        setSender("support@ncgrad.herokuapp.com");
+        setSender("support@taleb.kpi.com");
         setSubject("New order");
 
         setTemplateName("newOrder.ftl");
