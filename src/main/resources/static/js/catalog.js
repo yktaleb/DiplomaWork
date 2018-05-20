@@ -212,10 +212,11 @@ function loadCatalogPageOfType(options, callback) {
         url: '/api/user/products?productTypeId=' + productTypeId + '&regionId=' + regionId +
         '&page=' + page + '&amount=' + amount,
         success: function (data) {
+            var totalPages = !!data.totalPages ? data.totalPages : 1;
             catalogProductsCache = data.content;
             displayCatalogProducts();
 
-            updatePaginationWidget(page, data.totalPages);
+            updatePaginationWidget(page, totalPages);
         },
         error: function () {
             console.error("Cannot load products");

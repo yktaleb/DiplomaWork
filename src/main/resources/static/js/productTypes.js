@@ -261,20 +261,21 @@ function selectItem(index) {
     currentSelected = index;
 
     $(".product-characteristic-input").remove();
+    if (productTypesCache.length > 0) {
+        $("#product-type-name-input").val(productTypesCache[currentSelected].productTypeName);
+        $("#product-type-description-input").val(productTypesCache[currentSelected].productTypeDescription);
+        $('input:radio[name=product-type-status]').filter('[value=' + productTypesCache[currentSelected].isActive + ']')
+            .prop('checked', true);
 
-    $("#product-type-name-input").val(productTypesCache[currentSelected].productTypeName);
-    $("#product-type-description-input").val(productTypesCache[currentSelected].productTypeDescription);
-    $('input:radio[name=product-type-status]').filter('[value=' + productTypesCache[currentSelected].isActive + ']')
-        .prop('checked', true);
-
-    productTypesCache[currentSelected].productCharacteristics.forEach(function (characteristic) {
-        addProductCharacteristic(
-            characteristic.productCharacteristicId,
-            characteristic.characteristicName,
-            characteristic.measure,
-            characteristic.dataType.categoryId
-        );
-    });
+        productTypesCache[currentSelected].productCharacteristics.forEach(function (characteristic) {
+            addProductCharacteristic(
+                characteristic.productCharacteristicId,
+                characteristic.characteristicName,
+                characteristic.measure,
+                characteristic.dataType.categoryId
+            );
+        });
+    }
 }
 
 function displayLoadedProductTypes() {
@@ -300,10 +301,11 @@ function loadProductTypePage(page, amount, callback) {
     var jqxhr = $.ajax({
         url: '/api/admin/productTypes?page=' + page + '&amount=' + amount,
         success: function (data) {
+            var totalPages = !!data.totalPages ? data.totalPages : 1;
             productTypesCache = data.content;
             displayLoadedProductTypes();
 
-            updatePaginationWidget(page, data.totalPages);
+            updatePaginationWidget(page, totalPages);
         },
         error: function () {
             console.error("Cannot load products");

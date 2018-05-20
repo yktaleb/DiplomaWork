@@ -133,22 +133,23 @@ function selectProduct(index) {
     var typeSelector = $("#product-type-selector");
     typeSelector.val([]);
     typeSelector.prop("disabled", false);
+    if (productsCache.length > 0) {
+        $("#product-name-input").val(productsCache[currentSelected].productName);
+        $("#product-description-input").val(productsCache[currentSelected].productDescription);
+        $('input:radio[name=product-status]').filter('[value=' + productsCache[currentSelected].isActive + ']')
+            .prop('checked', true);
 
-    $("#product-name-input").val(productsCache[currentSelected].productName);
-    $("#product-description-input").val(productsCache[currentSelected].productDescription);
-    $('input:radio[name=product-status]').filter('[value=' + productsCache[currentSelected].isActive + ']')
-        .prop('checked', true);
+        if (productsCache[currentSelected].productId != null) {
+            typeSelector.val(productsCache[currentSelected].productTypeId);
+            typeSelector.prop("disabled", true);
 
-    if (productsCache[currentSelected].productId != null) {
-        typeSelector.val(productsCache[currentSelected].productTypeId);
-        typeSelector.prop("disabled", true);
+            displayCharacteristics();
 
-        displayCharacteristics();
-
-        productsCache[currentSelected].prices.forEach(function (prp) {
-            console.log(JSON.stringify(prp));
-            addRegionalPrice(prp.priceId, prp.regionId, prp.price);
-        });
+            productsCache[currentSelected].prices.forEach(function (prp) {
+                console.log(JSON.stringify(prp));
+                addRegionalPrice(prp.priceId, prp.regionId, prp.price);
+            });
+        }
     }
 }
 
@@ -497,10 +498,11 @@ function loadProductPage(page, amount, callback) {
     var jqxhr = $.ajax({
         url: '/api/admin/products?page=' + page + '&amount=' + amount,
         success: function (data) {
+            var totalPages = !!data.totalPages ? data.totalPages : 1;
             productsCache = data.content;
             displayLoadedProducts();
 
-            updatePaginationWidget(page, data.totalPages);
+            updatePaginationWidget(page, totalPages);
         },
         error: function () {
             console.error("Cannot load products");
