@@ -1,0 +1,7 @@
+package com.kpi.dimploma.taleb.service.exceptions;
+
+public class OrderException extends Exception {
+    public OrderException(String message) {
+        super(message);
+    }
+}
