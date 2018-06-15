@@ -16,7 +16,7 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.Collection;
 
 /**
- * Created by Alex on 5/16/2017.
+ * Created by Taleb on 5/16/2018.
  */
 @Service
 public class DiscountServiceImpl implements DiscountService {

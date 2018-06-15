@@ -16,7 +16,7 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 /**
- * Created by DeniG on 17.05.2017.
+ * Created by Taleb on 17.05.2018.
  */
 @RestController
 @RequestMapping("/api/pmg/domains")

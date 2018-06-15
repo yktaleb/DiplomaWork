@@ -3,7 +3,7 @@ package com.kpi.dimploma.taleb.service.notifications;
 import com.kpi.dimploma.taleb.model.Complain;
 
 /**
- * Created by DeniG on 22.05.2017.
+ * Created by Taleb on 22.05.2018.
  */
 public class NewComplaintMailContent extends MailContent {
     public NewComplaintMailContent(Complain complain) {

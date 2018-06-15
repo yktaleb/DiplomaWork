@@ -16,7 +16,7 @@ import java.util.Collection;
 import java.util.stream.Collectors;
 
 /**
- * Created by Alex on 5/16/2017.
+ * Created by Taleb on 5/16/2018.
  */
 @RestController
 @RequestMapping("/api/admin/discounts")

@@ -7,7 +7,7 @@ import lombok.Data;
 import java.time.OffsetDateTime;
 
 /**
- * Created by DeniG on 16.05.2017.
+ * Created by Taleb on 16.05.2018.
  */
 @Data
 @Builder

@@ -1,7 +1,7 @@
 package com.kpi.dimploma.taleb.service.exceptions;
 
 /**
- * Created by Alex on 5/26/2017.
+ * Created by Taleb on 5/26/2018.
  */
 public class DiscountException extends Exception {
     public DiscountException(String message){

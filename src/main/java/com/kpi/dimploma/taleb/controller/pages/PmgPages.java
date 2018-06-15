@@ -4,7 +4,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
- * Created by DeniG on 16.05.2017.
+ * Created by Taleb on 16.05.2018.
  */
 @Controller
 public class PmgPages {

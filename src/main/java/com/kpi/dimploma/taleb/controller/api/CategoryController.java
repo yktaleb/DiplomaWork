@@ -17,7 +17,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Created by DeniG on 20.05.2017.
+ * Created by Taleb on 20.05.2018.
  */
 @RestController
 @RequestMapping("api/category")

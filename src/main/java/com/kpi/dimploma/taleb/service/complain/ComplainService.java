@@ -6,7 +6,7 @@ import com.kpi.dimploma.taleb.service.exceptions.*;
 import java.util.Collection;
 
 /**
- * Created by DeniG on 16.05.2017.
+ * Created by Taleb on 16.05.2018.
  */
 public interface ComplainService {
     public Collection<Complain> getAllComplains(long size, long offset);

@@ -18,7 +18,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * created by DeniG on 5/01/2017. edited by Pavlo Rospopa
+ * Created by Taleb on 5/01/2018
  */
 @Repository
 public class ProductRegionPriceDaoImpl extends AbstractDao implements ProductRegionPriceDao {

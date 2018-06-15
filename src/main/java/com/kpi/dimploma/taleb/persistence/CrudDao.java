@@ -13,7 +13,6 @@ public interface CrudDao<T> {
     List<T> findAll();
 
     default List<T> findAll(long size, long offset) {
-        //TODO implement in all dao
         throw new UnsupportedOperationException();
     }
 

@@ -6,7 +6,7 @@ import com.kpi.dimploma.taleb.model.ProductInstance;
 import java.util.Collection;
 
 /**
- * Created by DeniG on 11.05.2017.
+ * Created by Taleb on 11.05.2018.
  */
 public interface CategoryService {
     public Category getByProductInstanceId(Long productInstanceId);

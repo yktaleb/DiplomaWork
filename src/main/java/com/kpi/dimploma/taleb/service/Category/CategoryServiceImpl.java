@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 import java.util.Collection;
 
 /**
- * Created by DeniG on 11.05.2017.
+ * Created by Taleb on 11.05.2018.
  */
 @Service
 public class CategoryServiceImpl implements CategoryService {

@@ -1,7 +1,7 @@
 package com.kpi.dimploma.taleb.service.exceptions;
 
 /**
- * Created by DeniG on 24.05.2017.
+ * Created by Taleb on 24.05.2018.
  */
 public class IncorrectRoleException extends Exception {
     public IncorrectRoleException() {

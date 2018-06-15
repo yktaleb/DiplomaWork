@@ -8,7 +8,7 @@ import com.kpi.dimploma.taleb.service.exceptions.DiscountException;
 import java.util.Collection;
 
 /**
- * Created by Alex on 5/16/2017.
+ * Created by Taleb on 5/16/2018.
  */
 public interface DiscountService {
     Collection<Discount> getDiscounts();
